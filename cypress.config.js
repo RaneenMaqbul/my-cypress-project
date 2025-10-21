@@ -1,20 +1,14 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  e2e: 
-  {
-    reporter: 'mochawesome',
-reporterOptions: {
-  reportDir: 'cypress/reports/mochawesome',
-  overwrite: false,
-  html: true,
-  json: true,
-},
+  e2e: {
     baseUrl: 'https://automationexercise.com',
 
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      // suppress unnecessary XHR logs
+      // تفعيل Allure plugin
+      require('@shelex/cypress-allure-plugin/writer')(on, config);
+
+      // إخفاء بعض الـ XHR logs غير الضرورية
       on('task', {
         log(message) {
           if (!message.includes('GET https://api.adat')) {
@@ -22,7 +16,15 @@ reporterOptions: {
           }
           return null;
         },
-          });
+      });
+
+      return config;
     },
+  },
+
+  env: {
+    allure: true,
+    allureResultsPath: 'allure-results',
+    allureReuseAfterSpec: true
   },
 });
