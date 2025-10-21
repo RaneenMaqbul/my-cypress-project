@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-15T11:31:44.676Z",
+    "end": "2025-10-15T11:31:59.289Z",
+    "duration": 14613,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e59159c-111f-4530-b6da-d4410b463752",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Smoke\\Login.cy.js",
+      "file": "cypress\\e2e\\Smoke\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ed091b36-7c95-41f3-9361-f7ae81523d2c",
+          "title": "Smoke Test - Login Functionality ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login sucessfully with valid credentails ",
+              "fullTitle": "Smoke Test - Login Functionality  Should login sucessfully with valid credentails ",
+              "timedOut": null,
+              "duration": 11959,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('testData/loginData.json').then(data => {\n  cy.login(data.validuser.email, data.validuser.password);\n  cy.contains('Logged in as', {\n    timeout: 10000\n  }).should('be.visible');\n});",
+              "err": {},
+              "uuid": "8cf9a87f-138f-4471-97f2-367d11552e8f",
+              "parentUUID": "ed091b36-7c95-41f3-9361-f7ae81523d2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8cf9a87f-138f-4471-97f2-367d11552e8f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11959,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

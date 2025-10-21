@@ -1,0 +1,19 @@
+{
+  "name": "Raneen",
+  "SignUpemail": "raneen_auto@test.com",
+   "ValidEmail":"raneen-test@gmail.com",
+   "InValidEmail":"invalidEmail-test@gmail.com",
+  "password": "123456",
+  "firstName": "Raneen",
+  "lastName": "Maqbul",
+  "company": "Raneen Company",
+  "address1": "Amman",
+  "address2": "Daboq Street",
+  "country": "Canada",
+  "state": "Jordan",
+  "city": "Amman",
+  "zipcode": "3456",
+  "mobile": "123456789",
+  "subject":"Website Feedback",
+  "message": "Hi team, I just wanted to share that the website works smoothly on mobile! Keep up the good work."
+}

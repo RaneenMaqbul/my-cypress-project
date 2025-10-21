@@ -1,0 +1,11 @@
+Bug Report: Contact Us Form Validation
+---------------------------------------
+Environment: Staging
+Browser: Chrome 141.0
+Steps to reproduce:
+1. Navigate to Contact Us page.
+2. Leave "Email" empty.
+3. Click Submit.
+Expected result: Error message should be displayed.
+
+Uploaded by: Raneen Maqbul (QA Engineer)
